@@ -1,0 +1,67 @@
+
+/* Main-Container: */
+article.wrapper {
+    position: absolute;
+    bottom: 4em;
+    z-index: 3;
+    display: flex;
+    color: #fff;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    gap: 5em;
+    align-items: center;
+}
+
+
+/* Aside-Content-Container: */
+.aside-content-container {
+    width: 30em;
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-start;
+    margin-top: 12em;
+   
+}
+
+.aside-content-container > p {
+    font-weight: 500;
+    font-size: 1.4em;
+    line-height: 2;
+    margin-top: -0.7em;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.aside-content-container > button {
+    margin: -0.7em 0em 0em -0.2em;
+    padding: 0.7em 1.6em;
+    font-size: 1.1em;
+    font-weight: 500;
+    border-radius: 1em;
+    border: none;
+    background-color: gray;
+    color: #fff;
+    align-self: flex-start;
+}
+
+/* Image-Container: */
+div.image-container > img {
+    width: 39em;
+    height: 39em;
+}
+
+.h3-motivation {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    font-size: 1.8em;
+    line-height: 1.5;
+}
+
+.without-advertisements {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgba(0, 0, 255, 0.845);
+    font-style: italic;
+}

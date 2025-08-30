@@ -1,0 +1,70 @@
+.artists-main-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+
+    overflow: hidden;
+    /* скрива скролера */
+}
+
+.background-image {
+    position: absolute;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.background-shadow {
+    position: absolute;
+    z-index: -1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #000000d4;
+    opacity: 0.7;
+}
+
+.last-20-artists {
+    color: #fefefee3;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    font-size: 1.1em;
+    position: absolute;
+    letter-spacing: 2px;
+    z-index: 2;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, -50%);
+}
+
+.order-button-link {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    padding: 0.7rem 1.2rem;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #ffffff;
+    background: #000000;
+    border-radius: 0.8rem;
+    box-shadow: 0 2px 6px rgba(255, 255, 255, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Hover ефект – леко повдигане и светене */
+.order-button-link:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 2px 6px rgba(255, 255, 255, 0.3);
+    background: linear-gradient(135deg, #111111, #333333);
+}
+
+/* Активен ефект при клик */
+.order-button-link:active {
+    transform: translateY(0) scale(0.98);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+}

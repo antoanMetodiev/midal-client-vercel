@@ -1,0 +1,14 @@
+.artists-list-container {
+    padding-top: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 5px 10px 5px;
+    gap: 2.4em;
+    row-gap: 2.9em;
+    height: 27em;
+    width: 100%;
+    
+    overflow: auto;
+}

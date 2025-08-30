@@ -1,0 +1,168 @@
+.artist-details {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    color: #fff;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* background */
+.artist-background {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.artist-bg-image {
+    object-fit: cover;
+    filter: blur(20px) brightness(0.5);
+    transform: scale(1.1);
+}
+
+.artist-bg-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 1));
+}
+
+/* main content */
+.artist-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    gap: 2rem;
+    padding: 3rem;
+    align-items: flex-start;
+}
+
+.artist-avatar-wrapper {
+    flex-shrink: 0;
+    border-radius: 1em;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+}
+
+.artist-avatar {
+    border-radius: 1em;
+    object-fit: cover;
+    width: 250px;
+    height: 250px;
+    box-shadow: 0 2px 6px rgba(255, 255, 255, 0.3);
+}
+
+.artist-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.artist-name {
+    font-size: 3rem;
+    font-weight: 700;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+.artist-meta {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.artist-summary {
+    max-width: 650px;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    opacity: 0.85;
+}
+
+/* actions */
+.artist-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.btn-play,
+.btn-follow {
+    border: none;
+    padding: 0.8rem 1.6rem;
+    border-radius: 2em;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-play {
+    background: #1db954;
+    color: #fff;
+}
+
+.btn-play:hover {
+    background: #1ed760;
+    transform: translateY(-2px);
+}
+
+.btn-follow {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+}
+
+.btn-follow:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+/* gallery – за React Slick */
+.artist-gallery {
+    position: relative;
+    z-index: 2;
+    padding: 2em 2em 2em 5em;
+}
+
+/* slick добавя wrapper и slide класове */
+.artist-gallery .slick-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.artist-gallery .slick-slide img {
+    border-radius: 0.8em;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.artist-gallery .slick-slide img:hover {
+    transform: scale(1.05);
+}
+
+/* arrows */
+.artist-gallery .slick-prev,
+.artist-gallery .slick-next {
+    z-index: 3;
+    width: 2rem;
+    height: 2rem;
+    color: #fff;
+}
+
+.artist-gallery .slick-dots {
+    bottom: -1.5rem;
+}
+
+.artist-gallery .slick-dots li button:before {
+    color: #fff;
+    opacity: 0.7;
+}
+
+.artist-gallery .slick-dots li.slick-active button:before {
+    opacity: 1;
+}
+
+.gallery-thumb {
+    border-radius: 1em;
+    box-shadow: 0 2px 6px rgba(255, 255, 255, 0.3);
+}

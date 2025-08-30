@@ -1,0 +1,59 @@
+.arist-image-wrapper {
+    position: relative;
+    width: 155px;
+    height: 145px;
+    overflow: hidden;
+    border-radius: 1em;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.arist-image {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+    transition: transform 0.5s ease;
+}
+
+.arist-image-shadow {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.25);
+    transition: background-color 0.4s ease;
+    border-radius: inherit;
+}
+
+/* hover ефект */
+.arist-image-wrapper:hover {
+    transform: scale(1.04);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
+}
+
+.arist-image-wrapper:hover .arist-image {
+    transform: scale(1.1);
+}
+
+.arist-image-wrapper:hover .arist-image-shadow {
+    background-color: rgba(0,0,0,0.1);
+}
+
+/* име на артиста */
+.artist-name {
+    margin-top: 10px;
+    color: #f1f1f1;
+    font-family: "Inter", system-ui, sans-serif;
+    font-weight: 500;
+    font-size: 0.93rem;
+    letter-spacing: 0.3px;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+.arist-image-wrapper:hover + .artist-name {
+    color: #ffffff;
+}

@@ -1,0 +1,14 @@
+.midal-logo {
+    margin-top: -3px;
+    width: 2.5em;              /* малко по-голямо */
+    height: 2.5em;
+    border-radius: 0.75em;   /* леко заоблено */
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.6); /* лек бял glow */
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.midal-logo:hover {
+    transform: scale(1.1); /* леко увеличаване при hover */
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.9); /* по-силен glow при hover */
+}

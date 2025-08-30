@@ -1,0 +1,76 @@
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+/* За всички браузъри, които поддържат WebKit (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 2px;
+  /* Още по-тънък скролбар */
+}
+
+/* Стил на скрол лентата (пистата) */
+::-webkit-scrollbar-track {
+  background: #2a2a2a;
+  /* Малко по-светъл фон за по-добър контраст */
+  border-radius: 16px;
+}
+
+/* Стил на плъзгача (дръжката) */
+::-webkit-scrollbar-thumb {
+  background: silver;
+  /* Светло сиво за по-изчистен вид */
+  border-radius: 16px;
+  transition: background 0.3s ease;
+}
+
+/* Ефект при hover върху плъзгача */
+::-webkit-scrollbar-thumb:hover {
+  background: #ccc;
+  /* Още по-светъл при задържане */
+}
+
+/* За Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: silver #2a2a2a;
+  /* Thumb | Track */
+}

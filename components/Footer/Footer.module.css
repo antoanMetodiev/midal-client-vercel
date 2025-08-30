@@ -1,0 +1,146 @@
+/* Вместо :root */
+.main {
+    --primary: rgba(255, 255, 255, 0.85);
+    --light: rgba(255, 255, 255, 0.5);
+    --accent: rgb(86, 177, 187);
+}
+
+.main {
+    /* Премахваме background-color, за да не виждаме синия контейнер */
+    position: relative;
+    bottom: 0;
+    z-index: 4;
+    padding-top: 0.5em;
+    padding-bottom: 2em;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    /* Няма да имаме background-color на главния контейнер */
+}
+
+.blackMain {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.nav {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+
+/* Footer стилизация */
+.footer {
+    background-color: unset;
+    font: 0.75rem helvetica, sans-serif;
+    color: var(--light);
+    display: flex;
+    justify-content: center;
+    padding: 4.2em 3%;
+    position: relative;
+    bottom: 0;
+    z-index: 0;
+    margin-bottom: 1em;
+}
+
+
+.footerHeader {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: var(--primary);
+    padding: 0 2rem;
+}
+
+.footerHeader h2 {
+    position: relative;
+    text-transform: uppercase;
+}
+
+.footerHeader h2::before {
+    content: '';
+    position: absolute;
+    transform: translate(-0.5rem, -0.25rem);
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--accent);
+    z-index: -1;
+}
+
+.footerHeader p {
+    font-style: italic;
+    line-height: 1.8;
+    color: var(--light);
+}
+
+ul.icons {
+    display: flex;
+    gap: 0.5em;
+}
+
+.icon {
+    font-size: 2.3em;
+    padding: 0.25rem 0.5rem 0.25rem 0;
+    cursor: pointer;
+    color: var(--accent);
+}
+
+.icon:hover {
+    animation: pulse 0.5s;
+    color: var(--light);
+}
+
+.aside {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    padding: 0 2rem;
+}
+
+.category {
+    list-style-type: none;
+}
+
+.category li {
+    padding: 0.5rem 0;
+    cursor: pointer;
+}
+
+.category li:hover:not(:first-of-type) {
+    animation: pulse 0.5s;
+    color: var(--accent);
+}
+
+.category li:first-of-type {
+    color: var(--primary);
+    cursor: default;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: translate(0);
+    }
+
+    50% {
+        transform: translate(-0.1rem, -0.25rem);
+    }
+}
+
+@media (max-width: 800px) {
+    .footer {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+}
