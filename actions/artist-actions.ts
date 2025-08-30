@@ -1,7 +1,7 @@
 import axios from "axios";
 import { Artist } from "@/types/Artist";
 
-const BASE_URL = "http://localhost:1000";
+let BASE_URL = process.env.NEXT_PUBLIC_API_GATEWAY_BASE_URL;
 
 export async function fetchArtistsFromApi(title: string) {
     await axios.post(`${BASE_URL}/artist/api/find-all`, { title });
