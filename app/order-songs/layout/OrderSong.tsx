@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import styles from "./OrderSong.module.css";
-import axios from "axios";
+import { SongActions } from "@/actions/song-actions";
 
 export default function OrderSong() {
     const [song, setSong] = useState("");
@@ -15,13 +15,16 @@ export default function OrderSong() {
 
         setLoading(true);
         setMessage("");
-        
-        try {
-            axios.post(`http://localhost:1000/songs/create/${song}`);
 
-            setTimeout(() => {
-                setMessage("✅ Песента беше поръчана успешно и започна добавяне на резултати!");
-            }, 2000);
+        try {
+            const isCreated = await SongActions.createSongsFromApi(song);
+            if (isCreated) {
+                setTimeout(() => {
+                    setMessage("✅ Песента беше поръчана успешно и започна добавяне на резултати!");
+                }, 1000);
+            } else {
+                setMessage("⚠️ Сървърът не отговаря.");
+            }
 
         } catch (err) {
             setMessage("⚠️ Сървърът не отговаря.");
