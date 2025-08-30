@@ -1,7 +1,8 @@
 import axios from "axios";
 import { Song } from "@/types/Song";
 
-const BASE_URL = "http://localhost:1000/songs";
+// const BASE_URL = "http://localhost:1000/songs";
+const BASE_URL = "https://midal-api-gateway.onrender.com/songs";
 
 export const SongActions = {
 
