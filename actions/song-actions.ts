@@ -2,7 +2,7 @@ import axios from "axios";
 import { Song } from "@/types/Song";
 
 // const BASE_URL = "http://localhost:1000/songs";
-const BASE_URL = process.env.API_GATEWAY_BASE_URL;
+let BASE_URL = process.env.API_GATEWAY_BASE_URL;
 
 export const SongActions = {
 
@@ -13,6 +13,10 @@ export const SongActions = {
     },
 
     async getRandom50(): Promise<Song[]> {
+        console.log("Before => " + BASE_URL);
+        BASE_URL = process.env.API_GATEWAY_BASE_URL;
+        console.log("After => " + BASE_URL);
+
         const response = await axios.get<Song[]>(`${BASE_URL}/songs/get-random-50-songs`);
         console.log(response.data);
         return response.data;
