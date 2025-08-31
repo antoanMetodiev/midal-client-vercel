@@ -47,8 +47,9 @@
 
 .search-button:hover {
     transform: scale(1.1); 
-    cursor: pointer; с
+    cursor: pointer; 
 }
+
 .search-engine::placeholder {
     color: #000000d0;
 }
