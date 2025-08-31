@@ -6,6 +6,7 @@ import { Song } from "@/types/Song";
 import style from "./../SongsPodcasts.module.css";
 import { Footer } from "@/components/Footer/Footer";
 import { Spinner } from "@/components/Spinner/Spinner";
+import { useEffect, useState } from "react";
 
 interface SongsListProps {
     videos: Song[]
@@ -19,7 +20,25 @@ const SongsList = ({
     setCurrentIndex
 }: SongsListProps) => {
 
+    const [loading, setLoading] = useState(videos.length === 0);
+    const [showNoResults, setShowNoResults] = useState(false);
 
+    useEffect(() => {
+        if (videos.length === 0) {
+            setLoading(true);
+            const timer = setTimeout(() => {
+                setLoading(false);
+                setShowNoResults(true);
+            }, 3000);
+
+            return () => clearTimeout(timer);
+        } else {
+            setLoading(false);
+            setShowNoResults(false);
+        }
+    }, [videos]);
+
+    
     return (
         <div className={style['songs-list']}>
             {videos.length > 0 ? (
@@ -55,12 +74,16 @@ const SongsList = ({
                                 : video.title}
                         </h4>
 
-                        <h5 className={style['published-at']}>{new Date(video.publishedAt).toLocaleDateString()}</h5>
+                        <h5 className={style['published-at']}>
+                            {new Date(video.publishedAt).toLocaleDateString()}
+                        </h5>
                     </div>
                 ))
-            ) : (
+            ) : loading ? (
                 <Spinner />
-            )}
+            ) : showNoResults ? (
+                <p>Няма намерени резултати</p>
+            ) : null}
 
             {videos.length > 0 && <Footer />}
         </div>
