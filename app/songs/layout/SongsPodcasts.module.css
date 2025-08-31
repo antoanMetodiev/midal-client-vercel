@@ -37,18 +37,21 @@
 
 .search-button {
     position: absolute;
+    z-index: 4;
     top: 1.93em;
     left: 35.6em;
     width: 1.72em;
     height: 1.72em;
 
-    transition: transform 0.2s ease-in-out; 
+    transition: transform 0.2s ease-in-out;
+    /* плавна анимация */
 }
 
 .search-button:hover {
-    transform: scale(1.1); 
-    cursor: pointer; 
+    transform: scale(1.2);
+    cursor: pointer;
 }
+
 
 .search-engine::placeholder {
     color: #000000d0;
