@@ -409,3 +409,8 @@ img.user-image {
     bottom: 6px;
     right: 6px;
 }
+
+.no-results-h2 {
+    color: #fefefe4a;
+    font-weight: 500;
+}

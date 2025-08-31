@@ -38,7 +38,7 @@ const SongsList = ({
         }
     }, [videos]);
 
-    
+
     return (
         <div className={style['songs-list']}>
             {videos.length > 0 ? (
@@ -82,7 +82,7 @@ const SongsList = ({
             ) : loading ? (
                 <Spinner />
             ) : showNoResults ? (
-                <p>Няма намерени резултати</p>
+                <h2 className={style['no-results-h2']}>Няма намерени резултати</h2>
             ) : null}
 
             {videos.length > 0 && <Footer />}
