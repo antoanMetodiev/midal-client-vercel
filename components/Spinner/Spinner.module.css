@@ -1,0 +1,25 @@
+/* Стилизиране на контейнера на лоудъра */
+.spinner {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    border: 6px solid #f3f3f3;
+    border-top: 8px solid #000;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite; /* Намалихме времето на анимацията */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3), 0px 0px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Анимацията за въртене */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Song } from "@/types/Song";
 import style from "./../SongsPodcasts.module.css";
 import { Footer } from "@/components/Footer/Footer";
+import { Spinner } from "@/components/Spinner/Spinner";
 
 interface SongsListProps {
     videos: Song[]
@@ -58,7 +59,7 @@ const SongsList = ({
                     </div>
                 ))
             ) : (
-                <p>Loading songs...</p>
+                <Spinner />
             )}
 
             {videos.length > 0 && <Footer />}
