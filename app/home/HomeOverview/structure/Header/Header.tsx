@@ -16,7 +16,7 @@ const Header = () => {
 
             <nav className={style['overview-navigation']}>
                 <ul>
-                    <Link className={style['navigation-link']} href="/songs-podcasts">Songs</Link>
+                    <Link className={style['navigation-link']} href="/songs">Songs</Link>
                     <Link className={style['navigation-link']} href="/artists">Artists</Link>
                     <Link
                         className={style['linked-in-link']}
