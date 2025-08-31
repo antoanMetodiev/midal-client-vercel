@@ -41,8 +41,14 @@
     left: 35.6em;
     width: 1.72em;
     height: 1.72em;
+
+    transition: transform 0.2s ease-in-out; 
 }
 
+.search-button:hover {
+    transform: scale(1.1); 
+    cursor: pointer; с
+}
 .search-engine::placeholder {
     color: #000000d0;
 }

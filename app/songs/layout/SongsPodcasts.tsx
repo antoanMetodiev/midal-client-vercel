@@ -10,7 +10,7 @@ import Image from "next/image";
 import FavouritePlaylists from "./FavouritePlaylists/FavouritePlaylists";
 import SongsList from "./SongsList/SongsList";
 import AudioPlayer from "./AudioPlayer/AudioPlayer";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { SongActions } from "@/actions/song-actions";
 import { Song } from "@/types/Song";
 import { FaLinkedin } from "react-icons/fa";
@@ -20,6 +20,8 @@ const SongsPodcasts = () => {
     const [videos, setVideos] = useState<Song[]>([])
     const [listeningSong, setListeningSong] = useState<Song | undefined>();
     const [currentIndex, setCurrentIndex] = useState<number>(0);
+
+    const formRef = useRef<HTMLFormElement | null>(null);
 
     const fetchSongsByTitle = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -83,6 +85,7 @@ const SongsPodcasts = () => {
 
                         <span className={style['white-border-radius-wrapper-container']}></span>
                         <form
+                            ref={formRef}
                             onSubmit={fetchSongsByTitle}
                             className={style['search-form']}
                         >
@@ -93,11 +96,14 @@ const SongsPodcasts = () => {
                                 name="songTitle"
                             />
 
-                            <input
-                                type="image"
-                                src={searchButton.src}
+                            <Image
+                                onClick={() => {
+                                    formRef.current?.requestSubmit();
+                                }}
+                                src={searchButton}
                                 alt="searchButton"
-                                className={style['search-button']}
+                                width={24}
+                                height={24}
                             />
                         </form>
                     </div>
