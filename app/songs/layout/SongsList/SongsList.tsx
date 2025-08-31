@@ -82,7 +82,7 @@ const SongsList = ({
             ) : loading ? (
                 <Spinner />
             ) : showNoResults ? (
-                <h2 className={style['no-results-h2']}>Няма намерени резултати</h2>
+                <h3 className={style['no-results-h3']}>Няма намерени резултати.</h3>
             ) : null}
 
             {videos.length > 0 && <Footer />}

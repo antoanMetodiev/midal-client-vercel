@@ -410,7 +410,8 @@ img.user-image {
     right: 6px;
 }
 
-.no-results-h2 {
-    color: #fefefe4a;
+.no-results-h3 {
+    margin-top: 3em;
+    color: #fefefe;
     font-weight: 500;
 }
