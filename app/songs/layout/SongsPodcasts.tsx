@@ -93,14 +93,12 @@ const SongsPodcasts = () => {
                                 name="songTitle"
                             />
 
-                            <button type="submit" className={style['search-button']}>
-                                <Image
-                                    src={searchButton}
-                                    alt="searchButton"
-                                    width={24}
-                                    height={24}
-                                />
-                            </button>
+                            <input
+                                type="image"
+                                src={searchButton.src}
+                                alt="searchButton"
+                                className={style['search-button']}
+                            />
                         </form>
                     </div>
 
