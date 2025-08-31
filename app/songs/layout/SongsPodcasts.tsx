@@ -24,7 +24,7 @@ const SongsPodcasts = () => {
     const fetchSongsByTitle = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         const formData = new FormData(e.currentTarget);
-        const title = formData.get("songTitle") as string; 
+        const title = formData.get("songTitle") as string;
         console.log(title);
 
         try {
@@ -93,11 +93,14 @@ const SongsPodcasts = () => {
                                 name="songTitle"
                             />
 
-                            <Image
-                                src={searchButton}
-                                className={style['search-button']}
-                                alt="searchButton"
-                            />
+                            <button type="submit" className={style['search-button']}>
+                                <Image
+                                    src={searchButton}
+                                    alt="searchButton"
+                                    width={24}
+                                    height={24}
+                                />
+                            </button>
                         </form>
                     </div>
 
