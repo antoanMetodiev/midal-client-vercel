@@ -89,7 +89,7 @@ const SongsPodcasts = () => {
                             <input
                                 className={style['search-engine']}
                                 type="text"
-                                placeholder="Слушай.."
+                                placeholder="Търси.."
                                 name="songTitle"
                             />
 
