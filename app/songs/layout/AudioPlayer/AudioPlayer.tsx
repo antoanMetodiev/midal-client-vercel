@@ -32,7 +32,6 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({
     const [seek, setSeek] = useState(0);
     const [duration, setDuration] = useState(0);
 
-    // Когато подадеш listeningSong отвън, намираме индекса му в масива
     useEffect(() => {
         if (listeningSong) {
             const idx = videos.findIndex((v) => v.id === listeningSong.id);
@@ -40,7 +39,6 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({
         }
     }, [listeningSong, videos]);
 
-    // Зареждаме YouTube player
     useEffect(() => {
         debugger;
         if (typeof window === "undefined") return;
