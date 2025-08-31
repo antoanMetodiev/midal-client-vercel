@@ -37,17 +37,17 @@
 
 .search-button {
     position: absolute;
-    top: 1.93em;
+    top: 1.8em;
     left: 35.6em;
     width: 1.72em;
     height: 1.72em;
 
     transition: transform 0.2s ease-in-out;
-    /* плавна анимация */
+    cursor: pointer;
 }
 
 .search-button:hover {
-    transform: scale(1.2);
+    transform: scale(1.13);
     cursor: pointer;
 }
 

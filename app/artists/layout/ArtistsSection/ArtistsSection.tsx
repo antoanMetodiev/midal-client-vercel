@@ -42,7 +42,8 @@ const ArtistsSection = () => {
                 />
             </div>
 
-            {loading && <p>Loading artists...</p>}
+            {/* {loading && <p>Loading artists...</p>} */}
+            
             {artists && <ArtistsList artists={artists} />}
         </section>
     );

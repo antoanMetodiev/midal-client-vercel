@@ -17,6 +17,7 @@ import { FaLinkedin } from "react-icons/fa";
 import Link from "next/link";
 
 const SongsPodcasts = () => {
+    const [searchText, setSearchText] = useState("");
     const [videos, setVideos] = useState<Song[]>([])
     const [listeningSong, setListeningSong] = useState<Song | undefined>();
     const [currentIndex, setCurrentIndex] = useState<number>(0);
@@ -27,6 +28,7 @@ const SongsPodcasts = () => {
         e.preventDefault();
         const formData = new FormData(e.currentTarget);
         const title = formData.get("songTitle") as string;
+        setSearchText(title);
         console.log(title);
 
         try {
@@ -39,6 +41,8 @@ const SongsPodcasts = () => {
     };
 
     useEffect(() => {
+        if (searchText != "") return; 
+
         const fetchSongs = async () => {
             try {
                 setVideos((await SongActions.getRandom50()));
@@ -48,7 +52,7 @@ const SongsPodcasts = () => {
         };
 
         fetchSongs();
-    }, []);
+    }, [searchText]);
 
     return (
         <>
@@ -97,6 +101,7 @@ const SongsPodcasts = () => {
                             />
 
                             <Image
+                                className={style['search-button']}
                                 onClick={() => {
                                     formRef.current?.requestSubmit();
                                 }}

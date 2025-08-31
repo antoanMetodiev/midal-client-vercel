@@ -20,10 +20,11 @@
 }
 
 .title {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: bold;
     color: white;
     margin-bottom: 1.5rem;
+    line-height: 1.4;
 }
 
 .form {

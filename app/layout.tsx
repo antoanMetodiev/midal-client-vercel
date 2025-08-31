@@ -29,7 +29,7 @@ export default function RootLayout({
 			<body className={`${geistSans.variable} ${geistMono.variable}`}>
 				{children}
 
-				<Script id="block-devtools" strategy="afterInteractive">
+				{/* <Script id="block-devtools" strategy="afterInteractive">
 					{`
             document.addEventListener('contextmenu', function (e) {
               e.preventDefault();
@@ -49,7 +49,7 @@ export default function RootLayout({
               if (e.ctrlKey && e.shiftKey && e.key === "S") e.preventDefault();
             };
           `}
-				</Script>
+				</Script> */}
 			</body>
 		</html>
 	);

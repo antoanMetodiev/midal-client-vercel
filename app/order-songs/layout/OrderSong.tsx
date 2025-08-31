@@ -7,7 +7,7 @@ import { SongActions } from "@/actions/song-actions";
 export default function OrderSong() {
     const [song, setSong] = useState("");
     const [loading, setLoading] = useState(false);
-    const [message, setMessage] = useState("");
+    const [message, setMessage] = useState("Ако въведете името на изпълнител, в базата данни ще се запазят различни негови песни!");
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -36,12 +36,12 @@ export default function OrderSong() {
     return (
         <div className={styles.container}>
             <div className={styles.card}>
-                <h1 className={styles.title}>Поръчай песен</h1>
+                <h1 className={styles.title}>Въведете изпълнител или песен!</h1>
 
                 <form onSubmit={handleSubmit} className={styles.form}>
                     <input
                         type="text"
-                        placeholder="Въведи песен..."
+                        placeholder="Въведете.."
                         value={song}
                         onChange={(e) => setSong(e.target.value)}
                         className={styles.input}
