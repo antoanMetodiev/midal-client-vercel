@@ -26,12 +26,12 @@ const SongsList = ({
     useEffect(() => {
         if (videos.length === 0) {
             setLoading(true);
-            const timer = setTimeout(() => {
-                setLoading(false);
-                setShowNoResults(true);
-            }, 3000);
+            // const timer = setTimeout(() => {
+            //     setLoading(false);
+            //     setShowNoResults(true);
+            // }, 10000);
 
-            return () => clearTimeout(timer);
+            // return () => clearTimeout(timer);
         } else {
             setLoading(false);
             setShowNoResults(false);
